@@ -17,7 +17,7 @@ io.on("connection", (socket) => {
     socket.on("sendMsg", (msg) => { //recieve message from front
         console.log("message is", msg);
         // socket.emit("sendMsgServer", { ...msg, type: "otherMsg" });
-        io.to("Kuay_Group").emit("sendMsgServer", { ...msg, type: "otherMsg" });
+        io.to("Kuay_Group").emit("sendMsgServer", { ...msg});
     })
 
 });
